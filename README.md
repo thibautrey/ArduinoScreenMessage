@@ -9,9 +9,11 @@ SETUP and PREPARATION
 This library implies that you wire your LCD screen to the default SPI pins of your arduino.  
 
 Import the following libraries in your project : 
+<code>
 #include <SPI.h>
 #include <LiquidCrystalSPI.h>
 #include <LCDManager.h>
+</code>
 
 INITIALISE 
 
