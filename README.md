@@ -17,17 +17,17 @@ Import the following libraries in your project :
 
 **INITIALISE**
 
-###Initialise an LCD screen with the following constructor :### 
+####Initialise an LCD screen with the following constructor :#### 
 ```
 LCDManager lcdManager(LCD_NB_LINES, LCD_NB_COLS, /* Pin number for SS */);
 ```
 You can create as many LCDManager instances as you want as long as you specify a different SS pin for each of them. If you decide to display the same message on multiple screens just specify the same SS pin instead. 
 
-###In order to be able to scroll through a long message the library requires that you call a method in your loop function :###
+####In order to be able to scroll through a long message the library requires that you call a method in your loop function :####
 ```
 lcdManager.refreshDisplay();
 ```
-###You need to call this method for each of your LCDManager instances.### 
+####You need to call this method for each of your LCDManager instances.#### 
 ```
 void loop(){
 lcdManager1.refreshDisplay();
@@ -37,14 +37,14 @@ lcdManager2.refreshDisplay();
 
 **HOW TO USE**
 
-###Display a message on the screen :###
+####Display a message on the screen :####
 ```
 lcdManager.message("My message");
 ```
 
 The library will take care of formatting the text no matter what the size of the string is. 
 
-###Clear a line of the screen :###
+####Clear a line of the screen :####
 ```
 lcdManager.clearLine(0);
 ```
