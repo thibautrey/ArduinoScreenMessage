@@ -4,7 +4,7 @@ Display and format a message on an LCD screen for arduino. Automatically scrolls
 This library will help to you to set up a simple messaging display service for an Arduino using an LCD screen. You can also set up multiple screens and display different messages. The library will automatically format the text and display it corretly on the screen. It will also take care of scrolling through the message in case the screen is not big enough to display the entire message. 
 
 
-SETUP and PREPARATION
+**SETUP and PREPARATION**
 
 This library implies that you wire your LCD screen to the default SPI pins of your arduino.  
 
@@ -15,7 +15,7 @@ Import the following libraries in your project :
 #include <LCDManager.h>
 ```
 
-INITIALISE 
+**INITIALISE**
 
 Initialise an LCD screen with the following constructor : 
 ```
@@ -35,7 +35,7 @@ lcdManager2.refreshDisplay();
 }
 ```
 
-HOW TO USE
+**HOW TO USE**
 
 Display a message on the screen : 
 ```
