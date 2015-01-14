@@ -6,10 +6,11 @@ This library will help to you to set up a simple messaging display service for a
 
 **SETUP and PREPARATION**
 
-This library implies that you wire your LCD screen to the default SPI pins of your arduino.  
+This library implies that you wire your LCD screen to the default SPI pins of your arduino. For more information on how to wire your LCD screen please refer to the official arduino LiquidCrystal page [Visit Arduino!](http://playground.arduino.cc/Main/LiquidCrystal)
 
-Import the following library in your project : 
+Import the following libraries in your project : 
 ```
+#include <SPI.h>
 #include <LCDManager.h>
 ```
 
@@ -18,6 +19,8 @@ Import the following library in your project :
 ####Initialise an LCD screen with the following constructor :#### 
 ```
 LCDManager lcdManager(LCD_NB_LINES, LCD_NB_COLS, /* Pin number for SS */);
+lcdManager.setBacklightPin(10); // TO SET BEFORE SETTING THE BACKLIGHT STATUS
+lcdManager.backlight(LOW); // HIGH OR LOW DEPENDING IF YOU WANT TO TURN ON OR OFF THE BACKLIGHT
 ```
 You can create as many LCDManager instances as you want as long as you specify a different SS pin for each of them. If you decide to display the same message on multiple screens just specify the same SS pin instead. 
 
@@ -49,4 +52,23 @@ lcdManager.clearLine(0);
 
 clearLine will clear one line of the screen starting from 0 where 0 equal to the first line of the screen. 
 
-  
+
+
+** EXAMPLE SKETCH **
+```
+#include <SPI.h>
+#include <LCDManager.h>
+
+LCDManager lcdManager(2, 16, 7);
+
+void setup(){
+    lcdManager.clear();
+    lcdManager.message("My very very very very long which requires more than a page to display message");
+    lcdManager.setBacklightPin(10);
+    lcdManager.backlight(LOW);
+}
+
+void loop(){
+    lcdManager.refreshDisplay();
+}
+```
