@@ -72,5 +72,4 @@ void loop(){
 }
 ```
 
-Result of the sketch : 
 [![Auto scroll and auto format message LCD screen arduino](http://img.youtube.com/vi/MjKD8hAiS3g/0.jpg)](http://www.youtube.com/watch?v=MjKD8hAiS3g)
