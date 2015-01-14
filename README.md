@@ -8,10 +8,8 @@ This library will help to you to set up a simple messaging display service for a
 
 This library implies that you wire your LCD screen to the default SPI pins of your arduino.  
 
-Import the following libraries in your project : 
+Import the following library in your project : 
 ```
-#include <SPI.h>
-#include <LiquidCrystalSPI.h>
 #include <LCDManager.h>
 ```
 
