@@ -54,7 +54,7 @@ clearLine will clear one line of the screen starting from 0 where 0 equal to the
 
 
 
-** EXAMPLE SKETCH **
+**EXAMPLE SKETCH**
 ```
 #include <SPI.h>
 #include <LCDManager.h>
