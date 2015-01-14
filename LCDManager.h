@@ -3,6 +3,7 @@
 
 #include "Arduino.h"
 #include <LiquidCrystalSPI.h>
+#include <SPI.h>
 
 class LCDManager{
 	public :
