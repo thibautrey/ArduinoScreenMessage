@@ -62,7 +62,6 @@ clearLine will clear one line of the screen starting from 0 where 0 equal to the
 LCDManager lcdManager(2, 16, 7);
 
 void setup(){
-    lcdManager.clear();
     lcdManager.message("My very very very very long which requires more than a page to display message");
     lcdManager.setBacklightPin(10);
     lcdManager.backlight(LOW);
